@@ -7,3 +7,9 @@
 
 # 配置
 打开config.ini 文件进行详细配置。
+
+#自定义接口
+/App/Route.php 中配置相对应的路由
+#自带上传接口
+file的name参数为image,地址为/upload_file,method为GET。
+测试/index

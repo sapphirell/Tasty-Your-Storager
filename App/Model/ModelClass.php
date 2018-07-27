@@ -1,7 +1,7 @@
 <?php
 namespace App\Model;
 use App\Base;
-use App\config;
+use App\Config;
 use App\Server\DBClass;
 
 class ModelClass extends Base{

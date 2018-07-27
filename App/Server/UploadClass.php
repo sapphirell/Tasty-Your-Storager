@@ -66,9 +66,10 @@ class UploadClass extends Base{
             $this->error = '不被允许的类型';
             return $this;
         }
-        mkdir($this->root_path.$this->path,0777,true);
+        $ret = mkdir($this->root_path.$this->path,0777,true);
+
         if(!is_dir($this->root_path.$this->path)){
-            $this->error = "上传目录不存在";
+            $this->error = "不能建立目录" . $this->root_path.$this->path.",请在根目录建立upload文件夹,并给目录赋予权限777.";
             return $this;
         }
         $this->new_name = $this->new_name .'.' . end(explode('.',$_FILES[$file]['name']));

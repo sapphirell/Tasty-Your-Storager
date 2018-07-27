@@ -47,7 +47,13 @@ class IndexController extends Base {
     }
     public function test()
     {
-        return 'hello,Moe';
+        return "
+            <div style='width: 100%;text-align: center'>
+                <a style='margin-bottom: 10px' href='https://github.com/sapphirell/Your-Tasty-Storager'>YourTastyStorager</a>
+                <p  style='margin-bottom: 10px' >Powered By Sapphirell. © FantuanpuDevelopers</p>
+                <a href='/index'>Test Upload?</a>
+            </div>
+        ";
 
     }
 }

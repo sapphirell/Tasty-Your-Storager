@@ -9,7 +9,7 @@ class Base {
     public function __construct()
     {
         error_reporting(E_ERROR);
-        $this->config = config::returnConfig();
+        $this->config = Config::returnConfig();
     }
     public static function response($data = null,$ret='200',$msg='操作成功')
     {

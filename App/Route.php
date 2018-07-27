@@ -21,7 +21,7 @@ class route {
     public static function returnRoute()
     {
         return [
-            ''=>['/','IndexController','index'],//Controller文件夹下,IndexController控制器的index方法
+            ''=>['User','IndexController','test'],
             '/index'=>['User','IndexController','index'],
             '/upload_file'=>['User','IndexController','upload']
 

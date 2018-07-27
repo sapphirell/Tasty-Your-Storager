@@ -45,4 +45,9 @@ class IndexController extends Base {
         }
         return self::response(['url'=>$ret->file]);
     }
+    public function test()
+    {
+        return 'hello,Moe';
+
+    }
 }

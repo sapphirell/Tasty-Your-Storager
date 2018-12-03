@@ -38,6 +38,12 @@ class IndexController extends Base {
     }
     public function upload()
     {
+        // 指定允许其他域名访问
+        header('Access-Control-Allow-Origin:*');
+        // 响应类型
+        header('Access-Control-Allow-Methods:POST');
+        // 响应头设置
+        header('Access-Control-Allow-Headers:x-requested-with,content-type');
         $ret = $this->upload->upload('image');
         if ($ret->error)
         {
@@ -49,7 +55,7 @@ class IndexController extends Base {
     {
         return "
             <div style='width: 100%;text-align: center'>
-                <a style='margin-bottom: 10px' href='https://github.com/sapphirell/Your-Tasty-Storager'>YourTastyStorager</a>
+                <a style='margin-bottom: 10px' href='https://github.com/sapphirell/Your-Tasty-Storager'>Your Tasty Storager</a>
                 <p  style='margin-bottom: 10px' >Powered By Sapphirell. © FantuanpuDevelopers</p>
                 <a href='/index'>Test Upload?</a>
             </div>
